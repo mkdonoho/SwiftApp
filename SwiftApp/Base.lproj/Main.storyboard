@@ -8,6 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -24,43 +25,59 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9x-on-3Xf">
-                                <rect key="frame" x="271" y="116" width="58" height="30"/>
-                                <state key="normal" title="PUSH IT"/>
+                                <rect key="frame" x="271" y="116" width="59" height="30"/>
+                                <state key="normal" title="Click Me"/>
                                 <connections>
                                     <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eyg-Di-PoT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFQ-fM-0D4">
-                                <rect key="frame" x="260" y="187" width="81" height="30"/>
-                                <state key="normal" title="Cool Button"/>
-                                <connections>
-                                    <action selector="coolButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DT5-LG-tIz"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cTW-uo-Zaf">
+                                <rect key="frame" x="250" y="166" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Zt5-40-ODj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NPV-8E-d9n">
+                                <rect key="frame" x="251" y="216" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Nwc-we-SAp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="3vb-WX-wyn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0v7-Vp-tSi"/>
+                            <constraint firstItem="cTW-uo-Zaf" firstAttribute="top" secondItem="h9x-on-3Xf" secondAttribute="bottom" constant="20" id="18P-By-obC"/>
+                            <constraint firstItem="NPV-8E-d9n" firstAttribute="top" secondItem="cTW-uo-Zaf" secondAttribute="bottom" constant="20" id="68X-Zt-JaQ"/>
                             <constraint firstItem="3vb-WX-wyn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FoL-qP-fkR"/>
                             <constraint firstItem="3vb-WX-wyn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Ljh-e2-0y3"/>
                             <constraint firstItem="h9x-on-3Xf" firstAttribute="top" secondItem="3vb-WX-wyn" secondAttribute="bottom" constant="50" id="Q1h-Sb-8by"/>
-                            <constraint firstItem="aFQ-fM-0D4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RQp-2P-d1K"/>
-                            <constraint firstItem="aFQ-fM-0D4" firstAttribute="top" secondItem="h9x-on-3Xf" secondAttribute="bottom" constant="41" id="hvk-ss-Kca"/>
+                            <constraint firstItem="NPV-8E-d9n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wj5-nt-waW"/>
+                            <constraint firstItem="cTW-uo-Zaf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ijC-Ev-buf"/>
+                            <constraint firstItem="h9x-on-3Xf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xNB-AG-Vjh"/>
                             <constraint firstItem="h9x-on-3Xf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xd1-Jp-5Pl"/>
                             <constraint firstItem="h9x-on-3Xf" firstAttribute="top" secondItem="3vb-WX-wyn" secondAttribute="bottom" constant="25" id="z5Z-Ps-KPC"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="FoL-qP-fkR"/>
                                 <exclude reference="Q1h-Sb-8by"/>
+                                <exclude reference="xd1-Jp-5Pl"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="label1" destination="3vb-WX-wyn" id="DV7-VO-OnC"/>
+                        <outlet property="textField1" destination="cTW-uo-Zaf" id="0rZ-vc-Liw"/>
+                        <outlet property="textField2" destination="NPV-8E-d9n" id="ZeW-UJ-Zzp"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="349"/>
+            <point key="canvasLocation" x="297" y="316"/>
         </scene>
     </scenes>
 </document>
