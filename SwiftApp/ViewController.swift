@@ -17,7 +17,7 @@ class ViewController: UIViewController
     
     @IBAction func coolButtonClick(sender: AnyObject)
     {
-        label1.text = "Buttons are cool...."
+        label1.text = "Buttons are cool!"
         tapCount += 1
         
         print(tapCount)
@@ -39,7 +39,7 @@ class ViewController: UIViewController
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor.lightGrayColor()
-        label1.text = "Fuck the police!"
+        label1.text = "Fuck da police!"
         label1.textColor = UIColor.whiteColor()
         
     }
