@@ -14,24 +14,14 @@ class ViewController: UIViewController
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var textField1: UITextField!
     @IBOutlet weak var textField2: UITextField!
-    var tapCount = 0
-    
- 
-    @IBAction func buttonClick(sender: AnyObject)
+    @IBAction func buttonTapped(sender: AnyObject)
     {
-        
-        print(textField1.text!)
-        print(textField2.text!)
-        
-    }//end buttonClick
-    
+        label1.text = String ( Double(textField1.text!)! + Double(textField2.text!)! )
+    }
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.view.backgroundColor = UIColor.lightGrayColor()
-        label1.text = "Fuck da police!"
-        label1.textColor = UIColor.whiteColor()
         
     }
 

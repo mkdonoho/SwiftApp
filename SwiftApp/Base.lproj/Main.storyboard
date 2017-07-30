@@ -18,66 +18,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vb-WX-wyn">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Bu-aw-bqN">
+                                <rect key="frame" x="250" y="116" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="WyE-yG-GFR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M8s-Lc-n1H">
+                                <rect key="frame" x="250" y="166" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="BSg-xN-tBI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAs-0f-Dhr">
                                 <rect key="frame" x="256" y="70" width="89" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9x-on-3Xf">
-                                <rect key="frame" x="271" y="116" width="59" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQh-Uu-G07">
+                                <rect key="frame" x="271" y="241" width="59" height="30"/>
                                 <state key="normal" title="Click Me"/>
                                 <connections>
-                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eyg-Di-PoT"/>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cXa-VD-Jlh"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cTW-uo-Zaf">
-                                <rect key="frame" x="250" y="166" width="100" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Zt5-40-ODj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NPV-8E-d9n">
-                                <rect key="frame" x="251" y="216" width="100" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Nwc-we-SAp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3vb-WX-wyn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0v7-Vp-tSi"/>
-                            <constraint firstItem="cTW-uo-Zaf" firstAttribute="top" secondItem="h9x-on-3Xf" secondAttribute="bottom" constant="20" id="18P-By-obC"/>
-                            <constraint firstItem="NPV-8E-d9n" firstAttribute="top" secondItem="cTW-uo-Zaf" secondAttribute="bottom" constant="20" id="68X-Zt-JaQ"/>
-                            <constraint firstItem="3vb-WX-wyn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FoL-qP-fkR"/>
-                            <constraint firstItem="3vb-WX-wyn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Ljh-e2-0y3"/>
-                            <constraint firstItem="h9x-on-3Xf" firstAttribute="top" secondItem="3vb-WX-wyn" secondAttribute="bottom" constant="50" id="Q1h-Sb-8by"/>
-                            <constraint firstItem="NPV-8E-d9n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wj5-nt-waW"/>
-                            <constraint firstItem="cTW-uo-Zaf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ijC-Ev-buf"/>
-                            <constraint firstItem="h9x-on-3Xf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xNB-AG-Vjh"/>
-                            <constraint firstItem="h9x-on-3Xf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xd1-Jp-5Pl"/>
-                            <constraint firstItem="h9x-on-3Xf" firstAttribute="top" secondItem="3vb-WX-wyn" secondAttribute="bottom" constant="25" id="z5Z-Ps-KPC"/>
+                            <constraint firstItem="sQh-Uu-G07" firstAttribute="top" secondItem="mAs-0f-Dhr" secondAttribute="bottom" constant="150" id="Gq7-tP-KED"/>
+                            <constraint firstItem="M8s-Lc-n1H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I6d-8j-ZH4"/>
+                            <constraint firstItem="3Bu-aw-bqN" firstAttribute="top" secondItem="mAs-0f-Dhr" secondAttribute="bottom" constant="25" id="LuO-d9-ljr"/>
+                            <constraint firstItem="mAs-0f-Dhr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PTq-CM-HB7"/>
+                            <constraint firstItem="M8s-Lc-n1H" firstAttribute="top" secondItem="mAs-0f-Dhr" secondAttribute="bottom" constant="75" id="QIz-VJ-Hru"/>
+                            <constraint firstItem="sQh-Uu-G07" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jnU-v2-nEz"/>
+                            <constraint firstItem="3Bu-aw-bqN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nrn-Av-5Yg"/>
+                            <constraint firstItem="mAs-0f-Dhr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="sPd-4T-Kwz"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="FoL-qP-fkR"/>
-                                <exclude reference="Q1h-Sb-8by"/>
-                                <exclude reference="xd1-Jp-5Pl"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
-                        <outlet property="label1" destination="3vb-WX-wyn" id="DV7-VO-OnC"/>
-                        <outlet property="textField1" destination="cTW-uo-Zaf" id="0rZ-vc-Liw"/>
-                        <outlet property="textField2" destination="NPV-8E-d9n" id="ZeW-UJ-Zzp"/>
+                        <outlet property="label1" destination="mAs-0f-Dhr" id="UO1-OJ-EDd"/>
+                        <outlet property="textField1" destination="3Bu-aw-bqN" id="yir-jl-mHF"/>
+                        <outlet property="textField2" destination="M8s-Lc-n1H" id="mhr-4p-1KW"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="297" y="316"/>
+            <point key="canvasLocation" x="330" y="311"/>
         </scene>
     </scenes>
 </document>
