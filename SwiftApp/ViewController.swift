@@ -8,29 +8,29 @@
 
 import UIKit
 
-class ViewController: UIViewController
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
 
-    @IBOutlet weak var label1: UILabel!
-    @IBOutlet weak var textField1: UITextField!
-    @IBOutlet weak var textField2: UITextField!
-    @IBAction func buttonTapped(sender: AnyObject)
-    {
-        var addition: Bool = false
-        
-        if( addition)
-        {
-        label1.text = "SUM: \(Double(textField1.text!)! + Double(textField2.text!)!)"
-        }
-        else{
-            label1.text = "SUM: \(Double(textField1.text!)! - Double(textField2.text!)!)"
-        }
-    }
+    var emojis = ["💃","💩","😍","😎","😏"]
+    @IBOutlet weak var emojiTable: UITableView!
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor.lightGrayColor()
+        emojiTable.dataSource = self
+        emojiTable.delegate = self
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return emojis.count
+        
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = emojis[indexPath.row]
+        return cell
     }
 
     override func didReceiveMemoryWarning()
