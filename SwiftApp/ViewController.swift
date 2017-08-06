@@ -17,7 +17,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.view.backgroundColor = UIColor.lightGrayColor()
         emojiTable.dataSource = self
         emojiTable.delegate = self
     }
@@ -33,6 +32,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
 
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let emoji = emojis[indexPath.row]
+        performSegueWithIdentifier("moveSegue", sender: emoji)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let defVC = segue.destinationViewController as! emojiViewController
+        defVC.emoji = sender as! String
+    }
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
